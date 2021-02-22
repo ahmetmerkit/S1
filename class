@@ -1,0 +1,37 @@
+class Araba():
+    def __init__(self,model,renk,yakıt_tipi,motor_gucu,silindir):
+        self.model       = model
+        self.renk        = renk
+        self.yakıt_tipi  = yakıt_tipi
+        self.motor_gucu  = motor_gucu
+        self.silindir    = silindir
+
+    def araba_bilgisi(self):
+        print(
+            """
+            Model : {}
+            
+            Renk : {}
+            
+            Yakıt tipi : {}
+            
+            Motor Gücü :{}
+            
+            Silindir : {}
+            """.format(self.model,self.renk,self.yakıt_tipi,self.motor_gucu,self.silindir))
+    def renk_degistir(self,yenirenk):
+
+        self.renk = yenirenk
+
+
+
+
+
+
+araba1 = Araba("peugeot","kahverengi","elektrik",100,4)
+araba2 = Araba("mercedes","siyah","benzin",200,8)
+
+araba1.renk_degistir("beyaz")
+
+print(araba1.araba_bilgisi())
+
